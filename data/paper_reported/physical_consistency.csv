@@ -1,0 +1,7 @@
+model,P_mismatch,Q_mismatch,measurement_residual,constraint_violation_rate
+WLS-node,0.010,0.011,0.010,<0.5%
+MLP,0.032,0.035,0.030,3-6%
+GCN,0.026,0.029,0.024,2-5%
+GraphSAGE,0.024,0.027,0.022,2-4%
+GAT,0.021,0.024,0.019,1.5-3.5%
+Physics-GAT,0.013,0.015,0.011,0.5-2.0%
