@@ -111,6 +111,17 @@ The aggregate tables in `data/paper_reported/` include:
 
 The topology-distance regression is descriptive, not causal. The paper's observable-only re-analysis reports at least 95% numerically observable retained cases and preserves the GAT versus Physics-GAT comparison.
 
+## Research documentation
+
+- [Benchmark protocol](docs/benchmark_protocol.md)
+- [Methodology and problem formulation](docs/methodology.md)
+- [Physics-GAT objective](docs/physics_regularization.md)
+- [Results and interpretation](docs/results.md)
+- [Related work and full paper references](docs/literature_context.md)
+- [Reproducibility status](docs/reproducibility.md)
+- [Limitations and claim boundaries](docs/limitations.md)
+- [Paper-reported data provenance](results/README.md)
+
 ## Repository structure
 
 ```text
