@@ -1,0 +1,46 @@
+# Protocol snapshot transcribed from the paper.
+# Documentation metadata only; this is not a drop-in training configuration.
+benchmark:
+  name: published_55_bus_distribution_system_state_estimation
+  buses: 55
+  lines: 27
+  transformers: 27
+  generation_buses: 10
+  load_buses: 16
+  capacitor_banks: 3
+  measurements: 134
+  states: 109
+splits:
+  training_topology: T0
+  training_samples: 20000
+  validation_samples: 3000
+  iid_test_samples: 3000
+  ood_families:
+    - {name: T1, shift: N-1, retained_topologies: 10, fresh_points_per_topology: 1000}
+    - {name: T2, shift: N-2, retained_topologies: 10, fresh_points_per_topology: 1000}
+    - {name: T3, shift: approximately_5_percent_branch_modification, retained_topologies: 10, fresh_points_per_topology: 1000}
+    - {name: T4, shift: approximately_10_percent_branch_modification, retained_topologies: 10, fresh_points_per_topology: 1000}
+  total_ood_points: 40000
+models: [WLS-node, MLP, GCN, GraphSAGE, GAT, Physics-GAT]
+training:
+  hidden_width: 128
+  optimizer: Adam
+  learning_rate: 0.001
+  weight_decay: 0.00001
+  batch_size: 256
+  max_epochs: 200
+  early_stopping_patience: 20
+  normalization: training_statistics_only
+  seeds: [13, 42, 73, 101, 2026]
+physics_gat:
+  lambda_phys_candidates: [0.0001, 0.001, 0.01, 0.1, 1, 10]
+  selection: validation_only
+statistics:
+  paired_test_cases: true
+  paired_bootstrap_confidence_intervals: true
+  wilcoxon_signed_rank: true
+  effect_size_reporting: true
+  observable_only_reanalysis: true
+provenance:
+  source: OpenReview paper associated with forum id 4P0jM8lxua
+  status: paper_reported_protocol_snapshot_not_executable_configuration
