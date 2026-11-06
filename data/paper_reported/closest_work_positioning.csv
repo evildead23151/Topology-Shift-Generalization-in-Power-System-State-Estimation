@@ -1,0 +1,6 @@
+work,year,topology_variation,physics,primary_emphasis
+Ngo et al.,2024,Yes,Yes,Physics-informed graphical state estimation
+Moshtagh et al.,2025,Yes,No/limited,Topology-aware GNN for PMU-unobservable state estimation
+Wu et al.,2025,Yes,Yes,Meta-learning for topology variability
+Haug and Goebel,2025,Yes,No,Broad ML/DSSE benchmarking
+This work,2026,Strict held-out,Yes,Structural-OOD reliability and degradation versus topology distance
