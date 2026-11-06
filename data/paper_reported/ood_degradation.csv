@@ -1,0 +1,7 @@
+model,N-1,N-2,approximately-5-percent,approximately-10-percent
+WLS-node,1.19,1.47,1.90,2.50
+MLP,1.60,2.33,3.38,4.75
+GCN,1.50,2.18,3.09,4.41
+GraphSAGE,1.49,2.14,3.00,4.23
+GAT,1.45,2.05,2.87,4.00
+Physics-GAT,1.39,1.92,2.59,3.52
