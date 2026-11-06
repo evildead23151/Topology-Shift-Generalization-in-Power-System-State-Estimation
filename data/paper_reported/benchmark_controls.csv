@@ -1,0 +1,9 @@
+control,scientific_purpose
+T0-only training,Prevent topology leakage
+Fresh OOD operating points,Separate topology shift from sample duplication
+Shared measurements,Make WLS/ML comparisons information-fair
+Training-only normalization,Prevent distribution-statistic leakage
+Five fixed seeds,Quantify stochastic training variation
+Validation-only lambda,Prevent OOD hyperparameter tuning
+Observable-only re-analysis,Separate topology shift from observability failure
+Paired test cases,Make model comparisons statistically matched
